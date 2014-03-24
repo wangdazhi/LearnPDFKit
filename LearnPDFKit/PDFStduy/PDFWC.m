@@ -13,8 +13,34 @@
 
 @end
 
+static PDFWC * shareInstance=nil;
+
 @implementation PDFWC
 
+#pragma mark zoom
+
+-(IBAction) zoomOut:(id)sender
+{
+    if ([mainPDFView document]!=nil) {
+        [mainPDFView zoomOut:self];
+    }
+}
+-(IBAction) zoomIn:(id)sender
+{
+    if ([mainPDFView document]!=nil) {
+        [mainPDFView zoomIn:self];
+    }
+    //[[mainPDFView document] ]
+}
+
+#pragma mark life
++(PDFWC *) shareWC
+{
+    if (shareInstance==nil) {
+        shareInstance=[[PDFWC alloc] initWithWindowNibName:@"PDFWC"];
+    }
+    return shareInstance;
+}
 -(void)awakeFromNib
 {
    // [mainPDFView setFrame:self.window.frame];
@@ -32,14 +58,18 @@
 
 //https://developer.apple.com/library/mac/documentation/graphicsimaging/Conceptual/PDFKitGuide/PDFKit_Prog_Tasks/PDFKit_Prog_Tasks.html
 
+-(void) loadPDF:(NSString * ) oneFilePath
+{
+    PDFDocument * onePDF=[[PDFDocument alloc] initWithURL:[NSURL fileURLWithPath:oneFilePath]];
+    [mainPDFView setDocument:onePDF];
+
+}
 - (void)windowDidLoad
 {
     [super windowDidLoad];
     
       [mainPDFView setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
     
-    PDFDocument * onePDF=[[PDFDocument alloc] initWithURL:[NSURL fileURLWithPath:@"/Users/wangdazhitech/Music/jQuery权威指南.pdf"]];
-    [mainPDFView setDocument:onePDF];
     
     
     

@@ -12,4 +12,8 @@
 {
     IBOutlet PDFView * mainPDFView;
 }
++(PDFWC *) shareWC;
+-(void) loadPDF:(NSString * ) oneFilePath;
+-(IBAction) zoomOut:(id)sender;
+-(IBAction) zoomIn:(id)sender;
 @end

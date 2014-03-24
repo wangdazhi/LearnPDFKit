@@ -23,11 +23,51 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <pdfView autoresizesSubviews="NO" wantsLayer="YES" id="yh3-1x-sbj">
-                        <rect key="frame" x="0.0" y="-5" width="480" height="282"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
                     </pdfView>
                 </subviews>
             </view>
+            <toolbar key="toolbar" implicitIdentifier="85C8146D-EC80-4AA4-A0F9-156D181D88B9" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="eBY-SF-aLS">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="CA050927-0097-4976-BC69-13A7EFCF161E" label="Custom View" paletteLabel="Zoom Out" id="t9n-cX-zp5">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="82" height="32"/>
+                        <size key="maxSize" width="82" height="32"/>
+                        <button key="view" verticalHuggingPriority="750" id="tSv-dX-be1">
+                            <rect key="frame" x="0.0" y="14" width="82" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="push" title="Out" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DXR-Sq-uHF">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="zoomOut:" target="-2" id="zQ1-mc-CAu"/>
+                            </connections>
+                        </button>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="194A51F9-3956-4841-9ED8-FA1E3F00788D" label="Zoom In" paletteLabel="Custom View" id="DAY-yh-aeo">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="82" height="32"/>
+                        <size key="maxSize" width="82" height="32"/>
+                        <button key="view" verticalHuggingPriority="750" id="AG5-QV-8OL">
+                            <rect key="frame" x="0.0" y="14" width="82" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="push" title="In" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CxZ-3o-hg4">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="zoomIn:" target="-2" id="ghg-mB-kNc"/>
+                            </connections>
+                        </button>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="t9n-cX-zp5"/>
+                    <toolbarItem reference="DAY-yh-aeo"/>
+                </defaultToolbarItems>
+            </toolbar>
             <connections>
                 <outlet property="delegate" destination="-2" id="4"/>
             </connections>

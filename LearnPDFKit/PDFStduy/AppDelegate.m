@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PDFWC.h"
+#import "RFCreatePDFWC.h"
 
 PDFWC * oneWC;
 @implementation AppDelegate
@@ -19,9 +20,11 @@ PDFWC * oneWC;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    oneWC=[[PDFWC alloc] initWithWindowNibName:@"PDFWC"];
+    oneWC=[PDFWC shareWC];//[[PDFWC alloc] initWithWindowNibName:@"PDFWC"];
     
     [oneWC showWindow:self];
+    
+    [[RFCreatePDFWC shareWC] showWindow:self];
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.wangdazhi.PDFFORMEDITOR.PDFStduy" in the user's Application Support directory.
