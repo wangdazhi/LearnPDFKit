@@ -24,6 +24,8 @@
 		64F4D8A418DF2D96009AFA67 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64F4D8A318DF2D96009AFA67 /* Quartz.framework */; };
 		64F4D8A818E07241009AFA67 /* RFCreatePDFWC.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F4D8A618E07241009AFA67 /* RFCreatePDFWC.m */; };
 		64F4D8A918E07241009AFA67 /* RFCreatePDFWC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F4D8A718E07241009AFA67 /* RFCreatePDFWC.xib */; };
+		64F4D8F418E31EDD009AFA67 /* demoDC.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F4D8F218E31EDD009AFA67 /* demoDC.m */; };
+		64F4D8F518E31EDD009AFA67 /* demoDC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F4D8F318E31EDD009AFA67 /* demoDC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,9 @@
 		64F4D8A518E07241009AFA67 /* RFCreatePDFWC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFCreatePDFWC.h; sourceTree = "<group>"; };
 		64F4D8A618E07241009AFA67 /* RFCreatePDFWC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFCreatePDFWC.m; sourceTree = "<group>"; };
 		64F4D8A718E07241009AFA67 /* RFCreatePDFWC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RFCreatePDFWC.xib; sourceTree = "<group>"; };
+		64F4D8F118E31EDD009AFA67 /* demoDC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = demoDC.h; sourceTree = "<group>"; };
+		64F4D8F218E31EDD009AFA67 /* demoDC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = demoDC.m; sourceTree = "<group>"; };
+		64F4D8F318E31EDD009AFA67 /* demoDC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = demoDC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +136,7 @@
 		64F4D86D18DF2D5B009AFA67 /* PDFStduy */ = {
 			isa = PBXGroup;
 			children = (
+				64F4D8F018E31EC1009AFA67 /* DC */,
 				64F4D87918DF2D5B009AFA67 /* AppDelegate.h */,
 				64F4D87A18DF2D5B009AFA67 /* AppDelegate.m */,
 				64F4D87C18DF2D5B009AFA67 /* MainMenu.xib */,
@@ -175,6 +181,16 @@
 				64F4D89118DF2D5B009AFA67 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		64F4D8F018E31EC1009AFA67 /* DC */ = {
+			isa = PBXGroup;
+			children = (
+				64F4D8F118E31EDD009AFA67 /* demoDC.h */,
+				64F4D8F218E31EDD009AFA67 /* demoDC.m */,
+				64F4D8F318E31EDD009AFA67 /* demoDC.xib */,
+			);
+			name = DC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64F4D87218DF2D5B009AFA67 /* InfoPlist.strings in Resources */,
+				64F4D8F518E31EDD009AFA67 /* demoDC.xib in Resources */,
 				64F4D88318DF2D5B009AFA67 /* Images.xcassets in Resources */,
 				64F4D87818DF2D5B009AFA67 /* Credits.rtf in Resources */,
 				64F4D87E18DF2D5B009AFA67 /* MainMenu.xib in Resources */,
@@ -282,6 +299,7 @@
 				64F4D8A118DF2D6D009AFA67 /* PDFWC.m in Sources */,
 				64F4D88118DF2D5B009AFA67 /* PDFStduy.xcdatamodeld in Sources */,
 				64F4D8A818E07241009AFA67 /* RFCreatePDFWC.m in Sources */,
+				64F4D8F418E31EDD009AFA67 /* demoDC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
